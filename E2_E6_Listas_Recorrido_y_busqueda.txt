@@ -1,0 +1,48 @@
+Algoritmo Ejercicio6_Listas_Recorrido_y_busqueda
+	//Crea una lista con 8 temperaturas. 
+	//Recórrela y muestra la temperatura máxima, la mínima y cuántas están por encima de la media.
+	
+	Definir temperatura,maxima,minima,media,suma,maximamedia Como real	
+	Definir i Como Entero
+	
+	Dimensionar temperatura[8]
+	i=0
+	media=0
+	suma = 0
+	maximamedia = 0
+	
+	mientras i<=7 Hacer
+		
+		Escribir'insertar temperatura'
+		Leer	temperatura[i]
+		suma = suma + temperatura[i]
+		si i=0 Entonces
+			maxima = temperatura[0]
+			minima = temperatura[0]
+		FinSi
+			Si 	temperatura[i] > maxima Entonces
+				maxima = temperatura[i]
+			FinSi
+					Si  temperatura[i] < minima Entonces
+						minima = temperatura[i]
+					FinSi
+	
+	i=i+1
+	
+	FinMientras 
+	
+	media = suma / 8
+	
+	i=0
+
+	mientras i<=7 Hacer
+	Si 	temperatura[i] > media Entonces
+		maximamedia = maximamedia+1
+	FinSi
+	i=i+1
+	FinMientras
+
+Escribir 'LA MAXIMA ES DE: ' maxima ' Y LA MINIMA DE: ' minima
+Escribir 'CON UNA MEDIA DE: ' media, ' con una cantidad de: ' maximamedia ' por encima de la media.'
+
+FinAlgoritmo

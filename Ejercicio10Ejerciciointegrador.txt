@@ -1,0 +1,49 @@
+Algoritmo Ejercicio10Ejerciciointegrador
+	//Gestiona el inventario de una tienda. 
+	//Para cada uno de los 5 productos, pide nombre y cantidad en stock (guardándolos en dos listas). 
+	//Después muestra: el producto con menos stock, cuántos productos están agotados (stock = 0) y el stock total. 
+	//Si algún nombre tiene menos de 3 letras, avisa de que el nombre es demasiado corto.
+
+	Definir stock, agotados, productos, menosstock, stocktotal, longitudNombre, i Como Entero
+	Definir nombre, nombreMenor, nombrecorto Como Caracter
+
+	i=0
+	agotados = 0
+	stocktotal = 0
+	longitudnombre = 0
+	
+	Dimensionar productos[5]
+	Dimensionar stock[5]
+
+	Mientras i < 5 Hacer
+		
+		escribir ' cual es el nombre del producto? '
+		leer nombre
+		escribir 'cual es la cantidad de stock?'
+		leer stock[i]
+		SI i=0 Entonces
+			menosstock = stock[0]
+			nombreMenor = nombre
+		FinSi
+		SI 0 <> stock[i] y stock[i] < menosstock Entonces
+			menosstock = stock[i]
+			nombreMenor = nombre
+		FinSi
+		SI stock[i]=0 Entonces
+			agotados = agotados + 1
+		FinSi
+		stocktotal = stocktotal + stock[i]
+		
+		si longitud(nombre) < 3 Entonces
+			longitudnombre = longitudnombre+ 1
+			nombrecorto = nombre 
+			Escribir 'son demasiados cortos los nombres de: ' nombrecorto
+		FinSi
+		i = i+1
+		
+	FinMientras
+	
+	Escribir 'Producto con Menor Stock: ' nombremenor ' total de: ' menosstock
+	Escribir 'Cantidad productos agotados: ' agotados
+	Escribir 'Stock total: ' stocktotal
+FinAlgoritmo

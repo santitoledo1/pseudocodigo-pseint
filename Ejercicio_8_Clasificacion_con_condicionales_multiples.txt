@@ -1,0 +1,48 @@
+Algoritmo Ejercicio_8_Clasificacion_con_condicionales_multiples
+	
+	//Lee las notas de una lista de alumnos. Por cada nota, clasifícala (Suspenso < 5, Aprobado
+	//5?6.9, Notable 7?8.9, Sobresaliente >= 9) y cuenta cuántos hay de cada categoría.
+	
+	Definir notas,alumnos,i Como Real
+	definir suspenso,aprobado,notable,sobresaliente Como Caracter
+	definir Csuspenso,Caprobado,Cnotable,Csobresaliente Como Entero
+	
+	csuspenso=0
+	caprobado =0
+	cnotable =0
+	csobresaliente = 0
+	
+	Dimensionar alumnos[5]
+	i=0
+	Mientras i < 5 Hacer
+		escribir 'nota: ' 
+		leer alumnos[i]
+		SI alumnos[i]<5 Entonces
+			Escribir 'suspenso'
+			csuspenso=csuspenso+1
+		SINO 
+			si alumnos[i] >= 5 y alumnos[i] <= 6.9 Entonces	
+				Escribir 'aprobado'
+				caprobado=caprobado+1
+			SINO 
+				sI alumnos[i] >= 7 y alumnos[i] <= 8.9 Entonces	
+					Escribir 'notable'
+					cnotable=cnotable+1
+				SINO 
+					si alumnos[i] >= 9 Entonces	
+						Escribir 'sobresaliente'
+						csobresaliente=csobresaliente+1
+					FinSi
+				FinSi
+			FinSI
+		FinSi
+	i=i+1
+
+FinMientras
+escribir 'LOS RESULTADOS GENERALES FUERON: '
+escribir 'suspendidos ' csuspenso
+escribir  'aprobados ' caprobado
+Escribir 'notables ' cnotable 
+Escribir 'sobresalientes ' csobresaliente
+	
+FinAlgoritmo

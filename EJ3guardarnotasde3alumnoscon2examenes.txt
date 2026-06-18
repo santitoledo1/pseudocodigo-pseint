@@ -1,0 +1,37 @@
+Algoritmo EJ3guardarnotasde3alumnoscon2examenes
+	
+	Definir alumno, nota Como Entero
+	Definir examen Como Real
+	
+	
+	
+	Dimensionar examen[3,2]
+	
+	alumno = 0
+	
+	mientras alumno < 3  Hacer
+		nota = 0
+		Mientras nota < 2
+			Escribir 'que nota saco alumno: ' alumno , ' ' nota
+			leer examen[alumno,nota]
+			nota = nota + 1	
+		FinMientras
+		alumno = alumno + 1
+	FinMientras
+	
+	escribir 'la cantidad total de alumnos es de: ' alumno ,' y han sido evaluados un total de: ' nota ' veces cada uno.'
+	
+	nota = 0 
+	alumno = 0 
+	
+	mientras alumno < 3  Hacer
+		nota = 0
+		Mientras nota < 2
+			Escribir alumno , ' ' , examen[alumno,nota]
+			nota = nota + 1	
+		FinMientras
+		alumno = alumno + 1
+	FinMientras
+	
+	Escribir 'la 2da nota del tercer alumno, es de: ' examen[2,1]
+FinAlgoritmo

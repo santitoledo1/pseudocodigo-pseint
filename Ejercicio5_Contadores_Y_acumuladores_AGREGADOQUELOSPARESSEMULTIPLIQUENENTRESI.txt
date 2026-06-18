@@ -1,0 +1,56 @@
+Algoritmo Ejercicio5_Contadores_Y_acumuladores_AGREGADOQUELOSPARESSEMULTIPLIQUENENTRESI
+	//Lee n?meros enteros uno a uno 	
+	//hasta que el usuario introduzca un 0. 
+	//Al terminar, muestra cu?ntos n?meros se introdujeron,
+	//su suma total 
+	//y su media.
+	
+	Definir numeros, contadornumeros , suma, multli como enteros
+	Definir media como real
+	Definir existepar Como Logico
+	
+	contadornumeros = 0
+	suma = 0
+	media = 0
+	multli = 1
+	existepar = Falso
+
+	Escribir 'insertar numeros '
+	leer numeros
+	si numeros MOD 2 = 0 Entonces
+		multli = numeros
+	FinSi
+
+	si numeros <> 0 Entonces
+		
+		suma = suma + numeros
+		Mientras  numeros <> 0 Hacer
+			
+			Escribir 'insertar numeros '
+			leer numeros
+			
+			
+			suma = suma + numeros
+			contadornumeros = contadornumeros + 1
+			media = suma / contadornumeros
+			
+			si numeros <> 0 y numeros MOD 2 = 0 Entonces
+				existepar = Verdadero
+				multli = multli * numeros 
+			FinSi
+		FinMientras
+	FinSi
+	
+	escribir 'total de numeros escritos es: ' contadornumeros 
+	Escribir media ' de media'
+	escribir 'la suma de todos los numeros es igual a : ' suma '.' 
+	
+	si existepar = verdadero Entonces
+		Escribir 'multli numeros pares: ' multli
+	SINO 
+		Escribir ' NO EXISTEN NUMEROS PARES. '
+
+	FinSi
+	
+	
+FinAlgoritmo

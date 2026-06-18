@@ -1,0 +1,19 @@
+Algoritmo E2_E4_Bucle_Mientras_validacion
+	//Solicita una contraseña repetidamente hasta que el usuario introduzca la correcta
+	//("clave123"). Cuenta cuántos intentos ha necesitado y muéstralo al final.
+	Definir password Como Caracter
+	
+	Definir intentos Como Entero
+	intentos = 1
+	
+	escribir 'ingrese su contraseña'
+	Leer password
+		mientras password <> 'clave123' Hacer
+			escribir 'vuelva a intentarlo:'
+			Leer password
+			intentos = intentos + 1
+		FinMientras
+		Escribir 'acceso correcto'
+		ESCRIBIR 'numero de intentos: ' intentos
+		
+FinAlgoritmo

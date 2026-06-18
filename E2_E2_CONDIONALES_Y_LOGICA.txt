@@ -1,0 +1,30 @@
+Algoritmo E2_E2_CONDIONALES_Y_LOGICA
+	
+	//Ejercicio 2 Condicionales y lógica
+	//Lee la edad de una persona y si tiene o no carnet de conducir (sí/no). Indica si puede
+	//alquilar un coche: debe ser mayor de 18 años Y tener carnet. Muestra el motivo si no puede.
+	
+	Definir edad Como Entero
+	Definir carnet como logico
+	
+	escribir 'escribir VERDADERO en caso de tener Carnet de Conducir, o FALSO en caso de no tenerlo'
+	leer carnet
+	
+	si carnet Entonces
+		Escribir 'edad que figura en el carnet de conducir?'
+		leer edad
+		SI edad >= 18 Entonces
+			Escribir 'PUEDE ALQUILAR'
+		SINO 
+			Escribir 'NO PUEDE ALQUILAR POR SER MENOR DE EDAD'
+		FinSi
+		
+	SiNo
+		Escribir 'NO PUEDE ALQUILAR POR NO TENER CARNET'
+	FinSi
+	
+
+	
+	
+	
+FinAlgoritmo

@@ -1,0 +1,32 @@
+Algoritmo Ejercicio7Listasycadenascombinadas
+	//Dada una lista de nombres, recórrela y muestra 
+	//solo aquellos que empiezan por una letra
+	//que pida el usuario. Indica al final cuántos coincidieron.
+	
+	Definir nombres, letra Como caracter
+	Definir i, contador Como entero
+	
+	Dimensionar nombres[10]
+	contador=0
+	i=0
+	mientras i < 10 Hacer
+		Escribir 'escriba un nombre'
+		Leer nombres[i]
+		i=i+1
+	FinMientras
+	
+	i=0
+	Escribir 'que letra quieres buscar?' 
+	leer letra
+	Escribir 'fila de nombres que empiezan con la letra: ' letra
+	mientras i < 10 Hacer
+				si Subcadena(nombres[i],0,0) = letra Entonces
+					escribir nombres[i]
+					contador = contador + 1
+				FinSi
+
+		i=i+1
+	FinMientras 
+	escribir 'son: ' contador
+
+FinAlgoritmo

@@ -1,0 +1,26 @@
+Algoritmo E2_E3_Operaciones_con_cadenas
+	//Pide el nombre y los apellidos del usuario por separado. 
+	//Muestra el nombre completo,
+	//Su número total de caracteres 
+	//y las iniciales (por ejemplo, "Ana López Ruiz" ? "A.L.R.").
+	
+	Definir nombre, apellidos1, apellidos2, iniciales Como Caracter
+	Definir caracteresnombre , caracteresapellidos Como Real
+	
+	escribir 'Cúal es tu Nombre? '
+	leer nombre
+	caracteresnombre = longitud(nombre)
+	
+	Escribir 'Cúal es tu 1er Apellidos? '
+	leer apellidos1
+	escribir 'segundo apellido? '
+	leer apellidos2
+	caracteresapellidos = Longitud(apellidos1) + Longitud(apellidos2)
+	
+	iniciales = subcadena(nombre,0,0) + '.' + Subcadena(apellidos1,0,0) + '.'+ Subcadena(apellidos2,0,0)
+
+	
+	escribir 'nombre y apellido/s del usuario: ' nombre + ' ' apellidos1 + apellidos2
+	Escribir 'total de caracteres: ' caracteresnombre + caracteresapellidos 
+	Escribir 'las iniciales son: ' iniciales
+FinAlgoritmo
